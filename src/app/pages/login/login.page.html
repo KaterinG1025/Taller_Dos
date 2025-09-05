@@ -1,0 +1,42 @@
+<ion-content [fullscreen]="true" class="login-content">
+  <ion-grid>
+    <!-- Logo y título -->
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12" class="ion-text-center">
+        <img src="assets/images/logo.png" alt="Logo" class="login-logo" />
+        <h1 class="login-title">CompraFacil</h1>
+        <p class="login-subtitle">La aventura está por iniciar, por favor inicia sesión</p>
+      </ion-col>
+    </ion-row>
+
+    <!-- Formulario de login -->
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="10" size-md="6" class="login-box">
+
+        <ion-item>
+          <ion-icon name="person-outline" slot="start"></ion-icon>
+          <ion-input [(ngModel)]="username" placeholder="Usuario"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+          <ion-input [(ngModel)]="password" type="password" placeholder="Contraseña"></ion-input>
+        </ion-item>
+
+        <ion-button expand="block" class="login-btn" (click)="login()">Ingresar</ion-button>
+
+        <p class="recover">Recupera tu contraseña</p>
+
+        <!-- Botón con Google -->
+        <ion-button expand="block" class="google-btn" (click)="googleLogin()">
+          <img src="https://www.google.com/favicon.ico" class="google-icon" />
+          Ingresa con Google
+        </ion-button>
+
+        <p class="register">
+          ¿No tienes cuenta? <a href="#">Regístrate</a>
+        </p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

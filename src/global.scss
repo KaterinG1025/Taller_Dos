@@ -34,4 +34,282 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+//@import '@ionic/angular/css/palettes/dark.system.css';
+
+
+/**********************************************************
+    VARIABLES CSS PERSONALIZADAS
+
+***********************************************************/
+
+:root{
+    /*colores principales del diseño*/
+
+    --primary-color: #56B8F9;
+    --secondary-color: #1C2B4D;
+    --background-color: #56B8F9;
+    --white-color:#ffffff;
+    --black-color: #000000;
+    --light-gray:#cccccc;
+    --ion-background-color: #56B8F9;
+    --ion-text-color: #ffffff;
+
+    /*Espaciado de los bordes*/
+    --border-radius: 25px;
+    --border-radius-small: 15px;
+    --border-radius-large: 35px;
+    --shadow-color:rgba(223,3,143,0.3);
+}
+
+/*Fondo Personalizado*/
+
+ion-content{
+    --background: var(--background-color) !important;
+    --color: var(--white-color) !important;
+}
+
+/*Contenedor Centrado*/
+
+.centered-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+}
+
+/* Icono Principal*/
+
+.app-icon {
+    width: 120px;
+    height: 120px;
+    background: var(--primary-color);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:0 auto;
+    position: relative;
+    box-shadow: 0 4px 20px var(- --shadow-color);
+    overflow: hidden;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.logo-image{
+    width: 80px;
+    height: 800px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: all 0.3s ease;
+
+}
+
+.circle-accent{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 15px;
+    height: 15px;
+    background-color: var(--white-color);
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.app-name {
+    color: var(--secondary-color);
+    font-size: 40px;
+    font-weight: bold;
+    margin: 30px 0px 10px 0px;
+    text-align: center;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+
+}
+
+.user-name {
+    color: var(--white-color);
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0px;
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+/*Animacion Basica*/
+
+.pulse{
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.05);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+/* Responsive desing*/
+
+@media (max-width: 480px) {
+    .app-icon{
+        width: 100px;
+        height: 100px;
+    }
+    .app-name {
+        font-size: 28px;
+    }
+    .user-name {
+        font-size: 16px;
+    }
+}
+
+/***************HOME**********************/
+
+.home-container {
+  --background: #56b8f5;
+  text-align: center;
+}
+
+.home-logo {
+  width: 150px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.home-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #14213d;
+  margin-bottom: 1rem;
+}
+
+.home-subtitle {
+  font-size: 1rem;
+  color: #14213d;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.home-register-link {
+  font-size: 0.95rem;
+  color: #14213d;
+  text-decoration: underline;
+  display: block;   
+  margin-top: 3.5rem; 
+  text-align: center;  
+}
+
+.btn-primary{
+  --background: #14213d; 
+  --border-radius: 25px; 
+  font-weight: bold; 
+  width: 100%; 
+  max-width: 300px; 
+  margin: 0 auto 1rem auto; /* 👈 centrado */
+  display: block;
+}
+
+
+/*********************LOGIN*****************/
+.login-content {
+  --background: #56b8f5; /* Fondo azul */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.login-logo {
+  width: 120px;   /* Tamaño fijo del logo */
+  height: auto;
+  margin: 1rem auto;
+  display: block;
+}
+
+.login-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #14213d;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.login-subtitle {
+  font-size: 0.95rem;
+  color: #14213d;
+  margin-bottom: 1.5rem;
+}
+
+.login-box {
+  background: #6dc4f9;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Inputs */
+ion-item {
+  --background: #fff;
+  --border-radius: 8px;
+  margin-bottom: 1rem;
+  color: #000; /* Iconos en negro */
+}
+
+ion-input {
+  color: #000; /* Texto de los inputs en negro */
+}
+
+.login-btn {
+  --background: #14213d;
+  --border-radius: 25px;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.recover {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  color: #14213d;
+}
+
+.google-btn {
+  --background: #fff;
+  --color: #000;
+  font-weight: 500;
+  border-radius: 25px;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.register {
+  font-size: 0.9rem;
+  color: #14213d;
+  margin-top: 1.5rem;
+}
+
+.register a {
+  color: #14213d;
+  font-weight: bold;
+  text-decoration: underline;
+}
