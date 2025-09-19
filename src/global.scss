@@ -224,7 +224,7 @@ ion-content{
 
 /*********************LOGIN*****************/
 .login-content {
-  --background: #56b8f5; /* Fondo azul */
+  --background: #56b8f5; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -232,7 +232,7 @@ ion-content{
 }
 
 .login-logo {
-  width: 120px;   /* Tamaño fijo del logo */
+  width: 120px;  
   height: auto;
   margin: 1rem auto;
   display: block;
@@ -263,12 +263,15 @@ ion-content{
 ion-item {
   --background: #fff;
   --border-radius: 8px;
+  --min-height: 50px; /* altura mínima uniforme */
   margin-bottom: 1rem;
-  color: #000; /* Iconos en negro */
+  color: #000;
+  padding-left: 0.5rem;
 }
 
 ion-input {
-  color: #000; /* Texto de los inputs en negro */
+  color: #000;
+  font-size: 16px;
 }
 
 .login-btn {
@@ -277,6 +280,12 @@ ion-input {
   font-weight: bold;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
+}
+
+ion-icon {
+  font-size: 22px;
+  color: #14213d; /* mismo tono que títulos */
+  margin-right: 6px; /* separa el icono del input */
 }
 
 .recover {
@@ -312,4 +321,187 @@ ion-input {
   color: #14213d;
   font-weight: bold;
   text-decoration: underline;
+}
+
+/***********************REGISTRO*************/
+
+/* Fondo */
+ion-content {
+  --background: #56b8f5; /* Azul de fondo */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Contenedor del formulario */
+.registro-container {
+  background: #6dc4f9;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  max-width: 420px;
+  margin: auto;
+}
+
+/* Logo */
+.registro-logo {
+  width: 100px;
+  height: auto;
+  margin: 0 auto 0.5rem;
+  display: block;
+}
+
+/* Títulos */
+.registro-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #14213d;
+  margin-bottom: 0.3rem;
+}
+
+.registro-subtitle {
+  font-size: 0.95rem;
+  color: #14213d;
+  margin-bottom: 1.5rem;
+}
+
+/* Items del formulario */
+ion-item {
+  --background: #fff;
+  --border-radius: 8px;
+  margin-bottom: 1rem;
+  color: #000;
+}
+
+/* Inputs */
+ion-input {
+  color: #000;
+}
+
+/* Botón registro */
+ion-button {
+  --background: #14213d;
+  --border-radius: 25px;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+/* Mensajes de error */
+ion-note[color="danger"] {
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  margin-top: -0.3rem;
+  margin-bottom: 0.8rem;
+  display: block;
+  text-align: left;
+}
+
+.terminos-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+/* Redirección */
+.redirect {
+  font-size: 0.9rem;
+  margin-top: 1rem;
+  color: #14213d;
+
+  a {
+    color: #14213d;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+}
+
+
+/***************************RECUPERAR CONTRASEÑA*******************/
+
+.recuperar-content {
+  --background: #eef5fb;
+
+  ion-grid {
+    padding: 20px;
+  }
+
+  .logo {
+    width: 100px;
+    margin: 20px auto;
+    display: block;
+  }
+
+  p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+
+  ion-item {
+    --border-radius: 10px;
+    margin-bottom: 15px;
+    --background: #fff;
+    --border-color: #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+
+  ion-input {
+    font-size: 14px;
+  }
+
+  ion-button {
+    --border-radius: 10px;
+    font-weight: bold;
+  }
+
+  a {
+    color: #007bff;
+    text-decoration: none;
+  }
+}
+
+
+/******************************PERFIL*********************/
+
+.perfil-content {
+  --background: #f9fafc;
+
+  ion-grid {
+    padding: 20px;
+  }
+
+  .perfil-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 20px auto;
+    border: 3px solid #4a90e2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  ion-item {
+    --border-radius: 10px;
+    margin: 10px 0;
+    --background: #fff;
+    --border-color: #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  }
+
+  ion-label {
+    font-size: 15px;
+    color: #333;
+
+    strong {
+      color: #4a90e2;
+    }
+  }
+
+  ion-button {
+    --border-radius: 10px;
+    font-weight: bold;
+    margin-top: 15px;
+  }
 }
